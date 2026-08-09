@@ -121,6 +121,57 @@ function App() {
             </motion.div>
           </div>
       </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-16" id="features">
+        <h2 className="text-3xl font-bold">
+          Tudo o que você precisa
+        </h2>
+        <p className="text-slate-300 mt-2 max-w-2xl">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti earum aut error dolore.
+        </p>
+        <div className="mt-8 grid grid-cols-1 md-grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              {
+                title: "Design resposivo",
+                desc: "Funciona em qualquer tela",
+                icon: <Sparkles className="size-5 text-fuchsia-400"/>
+              },
+                            {
+                title: "Design resposivo",
+                desc: "Funciona em qualquer tela",
+                icon: <Star className="size-5 text-fuchsia-400"/>
+              },
+                            {
+                title: "Design resposivo",
+                desc: "Funciona em qualquer tela",
+                icon: <Zap className="size-5 text-fuchsia-400"/>
+              },
+                            {
+                title: "Design resposivo",
+                desc: "Funciona em qualquer tela",
+                icon: <Shield className="size-5 text-fuchsia-400"/>
+              },
+                            {
+                title: "Design resposivo",
+                desc: "Funciona em qualquer tela",
+                icon: <Sparkles className="size-5 text-fuchsia-400"/>
+              },
+                            {
+                title: "Design resposivo",
+                desc: "Funciona em qualquer tela",
+                icon: <Star className="size-5 text-fuchsia-400"/>
+              }
+            ].map((f) => (
+              <div key={f.title} className="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
+                <div className="flex items-center gap-3">
+                  {f.icon}
+                  <p className="font-semibold">{f.title}</p>
+                </div>
+                <p className="text-sm text-slate-400 mt-2">{f.desc}</p>
+              </div>
+            ))}
+        </div>
+      </section>
     </div>
   )
 }
