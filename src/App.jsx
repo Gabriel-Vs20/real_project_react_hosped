@@ -25,8 +25,8 @@ function App() {
 
   return (
     <div className="bg-slate-950 text-slate-100 selection:bg-fuschia-500/30">
-      <header className="sticky top-0 z-40 border-b border-white">
-        <div className="mx-auto max-w-6x1 px-4 py-4 flex items-center justify-between">
+      <header className="sticky top-0 z-40 border-b border-white bg-slate-950/80 backdrop-blur">
+        <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
           <a href="#" className="flex items-center gap-2">
             <Sparkles className="size-5 text-fuchsia-400"/>
             <span className="font-bold tracking-tight">Minha marca</span>
@@ -72,7 +72,7 @@ function App() {
         </div>
       </header>
       <section className="relative overflow-hidden">
-          <div className="mx-auto max-w-6x1 px-4 py-20 relative">
+          <div className="mx-auto max-w-6xl px-4 py-20 relative">
             <motion.h1 initial={{opacity: 0, y:20}} 
             animate={{opacity: 1, y:0}} 
             transition={{duration: 1}}
