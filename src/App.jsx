@@ -9,7 +9,8 @@ import{
   Star,
   Shield,
   Zap,
-  Sparkles
+  Sparkles,
+  Clock1
 }from 'lucide-react';
 
 const navLinks = [
@@ -122,7 +123,7 @@ function App() {
           </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-16" id="features">
+      <section className="mx-auto max-w-6xl px-4 py-6" id="features">
         <h2 className="text-3xl font-bold">
           Tudo o que você precisa
         </h2>
@@ -172,6 +173,75 @@ function App() {
             ))}
         </div>
       </section>
+        
+      <section className="mx-auto max-w-6xl px-4 py-6" id="testmonials">
+        <h2 className="text-3xl font-bold">Quem usou, aprovou</h2>
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-3">
+          {[1,2,3].map((i) =>
+          (
+            <blockquote key={i} className="rounded-2xl border border-white/10 p-6">
+              <div className="flex items-center gap-2 text-amber-400">
+                {Array.from({length: 5}).map((_, i)=>(
+                  <div key={i}>
+                    <Star className="size-4 fill-current"></Star>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-3 text-slate-300">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio sunt sed temporibus? Ea, quaerat harum cum magni aut, in illum ips
+              </p>
+              <p className="text-sm text-slate-400 mt-3">- Cliente</p>
+            </blockquote>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-6" id="pricing">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div>
+              <h2 className="text-3xl font-bold">Plano Único</h2>
+              <p className="mt-6 text-slate-300">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio sunt sed temporibus? Ea, quaerat harum cum magni aut, in illum ips
+              </p>
+              <ul className="mt-4 space-y-2-text-sm text-slate-300">
+                <li className="flex items-center gap-2">
+                  <Check className="size-4 text-emerald-400" /> Benefício 1
+                </li>
+                            <li className="flex items-center gap-2">
+                  <Check className="size-4 text-emerald-400" /> Benefício 2
+                </li>
+                            <li className="flex items-center gap-2">
+                  <Check className="size-4 text-emerald-400" /> Benefício 3
+                </li>
+              </ul>
+            {/* --- */}
+           </div>
+           <div className = "rounded-3xl border border-white/10 bg-white/[0.02] p-8"> 
+            <div className="text-sm text-slate-400">
+              A partir de
+            </div>
+            <div className="text-5xl font-extrabold mt-2">
+              R$ 199,90
+            </div>
+            <div className="text-sm text-slate-300 mt-4 flex gap-2">
+              <Clock1 className="size-4 text-amber-400" /> Somente durante essa semana
+            </div>
+            <button href="#" className="mt-6 cursor-pointer rounded-2xl bg-fuchsia-600 px-6 py-3 font-medium hover:bg-fuchsia-800">
+              Comprar agora!
+            </button>
+           </div>
+          </div>
+      </section>
+
+      <footer className="border-t border-white/5">
+        <div className="mx-auto max-w-6xl px-4 py-8 flex flex-col items-center">
+            <div className="mb-4">Minha Marca @{new Date().getFullYear()}</div>
+            <a href="#" className="text-slate-300">
+              Política de Privacidade
+            </a>
+          </div>
+      </footer>
+
     </div>
   )
 }
